@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.7)
+include(GNUInstallDirs)
 project(TCPDup)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -12,6 +13,9 @@ INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
 add_executable(tcpdup ${SOURCE_FILES})
 install (TARGETS tcpdup RUNTIME DESTINATION bin)
-install(FILES   ${CMAKE_CURRENT_BINARY_DIR}/tpcdup.service DESTINATION /etc/systemd/system    COMPONENT init)
+TARGET_LINK_LIBRARIES(tcpdup LINK_PUBLIC ${Boost_LIBRARIES} )
 
-TARGET_LINK_LIBRARIES( tcpdup LINK_PUBLIC ${Boost_LIBRARIES} )
+# systemd unit file
+configure_file (tcpdup.service ${CMAKE_CURRENT_BINARY_DIR}/tcpdup.service)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/tcpdup.service DESTINATION /lib/systemd/system)
+install(FILES tcpdup DESTINATION /etc/default)
