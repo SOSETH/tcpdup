@@ -1,0 +1,16 @@
+image: telyn/debhelper:stretch
+stages:
+  - build
+before_script:
+  - apt-get update -qq
+  - apt-get upgrade -qq
+  - apt-get --assume-yes -qq install libboost-all-dev cmake
+build:
+  stage: build
+  script:
+    - dpkg-buildpackage -uc -us
+    - mkdir build
+    - mv ../tcpdup_*.deb build/
+  artifacts:
+    paths:
+    - build/*
