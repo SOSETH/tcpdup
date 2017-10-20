@@ -10,6 +10,8 @@ set(SOURCE_FILES main.cpp TCPClient.cpp TCPClient.h TCPServerSession.cpp TCPServ
 FIND_PACKAGE( Boost 1.60 REQUIRED COMPONENTS program_options system thread regex)
 INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
-add_executable(TCPDup ${SOURCE_FILES})
+add_executable(tcpdup ${SOURCE_FILES})
+install (TARGETS tcpdup RUNTIME DESTINATION bin)
+install(FILES   ${CMAKE_CURRENT_BINARY_DIR}/tpcdup.service DESTINATION /etc/systemd/system    COMPONENT init)
 
-TARGET_LINK_LIBRARIES( TCPDup LINK_PUBLIC ${Boost_LIBRARIES} )
+TARGET_LINK_LIBRARIES( tcpdup LINK_PUBLIC ${Boost_LIBRARIES} )
