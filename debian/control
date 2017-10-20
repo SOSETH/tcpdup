@@ -9,3 +9,6 @@ Vcs-Browser: https://soslab.ethz.ch/isg/tcpdup
 
 Package: tcpdup
 Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: TCPDup duplicates a tcp stream
+ to multiple backends

@@ -33,7 +33,8 @@ void TCPServerSession::do_read(const boost::system::error_code &error) {
         std::istream is(&buffer);
         std::string line;
         std::getline(is, line);
-        for (const auto client : clients) {
+        line += "\n";
+	for (const auto client : clients) {
             client->sendMessage(line);
         }
         boost::asio::async_read_until(my_socket,
