@@ -1,10 +1,10 @@
-image: telyn/debhelper:stretch
+image: debian:stretch
 stages:
   - build
 before_script:
   - apt-get update -qq
   - apt-get upgrade -qq
-  - apt-get --assume-yes -qq install libboost-all-dev cmake
+  - apt-get --assume-yes -qq install libboost-all-dev cmake devscripts debhelper
 build:
   stage: build
   script:
