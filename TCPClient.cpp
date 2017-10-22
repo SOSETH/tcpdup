@@ -23,6 +23,10 @@ void TCPClient::sendMessage(std::string & message) {
         if (offline_messages.size() < buf_size) {
             offline_messages.push_back(message);
         }
+        if (offline_messages.size() % 10 == 0) {
+            std::cerr << "Backend " << backend_number << ", " << offline_messages.size()  << " of " << buf_size
+                      << " (max) messages in offline buffer" << std::endl;
+        }
     } else {
         io_service.post(
                 [this, message]() {

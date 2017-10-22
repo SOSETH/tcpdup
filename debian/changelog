@@ -1,3 +1,11 @@
+tcpdup (0.1+nmu1) unstable; urgency=medium
+
+  * Experimental seccomp support
+  * Fix unit file to limit memory
+  * Print buffer fill status every 10 messages
+
+ -- Maximilian Falkenstein <falkensm@sos.ethz.ch>  Sun, 22 Oct 2017 14:21:37 +0200
+
 tcpdup (0.1) unstable; urgency=medium
 
   * Initial Release

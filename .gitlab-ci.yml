@@ -4,13 +4,13 @@ stages:
 before_script:
   - apt-get update -qq
   - apt-get upgrade -qq
-  - apt-get --assume-yes -qq install libboost-all-dev cmake devscripts debhelper
+  - apt-get --assume-yes -qq install libboost-all-dev cmake devscripts debhelper libseccomp-dev
 build:
   stage: build
   script:
     - dpkg-buildpackage -uc -us
     - mkdir build
-    - mv ../tcpdup_*.deb build/
+    - mv ../tcpdup_*.deb .
   artifacts:
     paths:
-    - build/*
+    - tcpdup_*.deb
