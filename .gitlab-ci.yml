@@ -4,7 +4,7 @@ stages:
 before_script:
   - apt-get update -qq
   - apt-get upgrade -qq
-  - apt-get --assume-yes -qq install libboost-all-dev cmake devscripts debhelper libseccomp-dev
+  - apt-get --assume-yes -qq install libboost-all-dev cmake devscripts debhelper libseccomp-dev pkg-config
 build:
   stage: build
   script:
