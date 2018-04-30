@@ -3,7 +3,7 @@ Upstream-Name: tcpdup
 Source: <https://soslab.ethz.ch/isg/tcpdup>
 
 Files: *
-Copyright: 2017 Maximilian Falkenstein <falkensm@sos.ethz.ch>
+Copyright: 2017 Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>
 License: GPL-3.0+
 
 License: GPL-3.0+

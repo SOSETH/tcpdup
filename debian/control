@@ -1,7 +1,7 @@
 Source: tcpdup
 Section: utils
 Priority: optional
-Maintainer: Maximilian Falkenstein <falkensm@sos.ethz.ch>
+Maintainer: Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>
 Build-Depends: debhelper (>=9), libboost-all-dev, libseccomp-dev
 Standards-Version: 3.9.8
 Vcs-Git: git@soslab.ethz.ch:isg/tcpdup.git
