@@ -4,10 +4,8 @@ Priority: optional
 Maintainer: Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>
 Build-Depends: debhelper (>=9), libboost-all-dev, libseccomp-dev
 Standards-Version: 3.9.8
-Vcs-Git: git@soslab.ethz.ch:isg/tcpdup.git
-Vcs-Browser: https://soslab.ethz.ch/isg/tcpdup
-Description: TCPDup duplicates a tcp stream
- to multiple backends
+Vcs-Git: https://github.com/SOSETH/tcpdup.git
+Vcs-Browser: https://github.com/SOSETH/tcpdup
 
 Package: tcpdup
 Architecture: any

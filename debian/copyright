@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: tcpdup
-Source: <https://soslab.ethz.ch/isg/tcpdup>
+Source: <https://github.com/SOSETH/tcpdup>
 
 Files: *
 Copyright: 2017 Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>
