@@ -1,3 +1,9 @@
+tcpdup (0.1.1) unstable; urgency=medium
+
+  * Adjust seccomp filter for newer stdlibs
+
+ -- Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>  Mon, 22 Jul 2019 18:46:24 +0200
+
 tcpdup (0.1+nmu1) unstable; urgency=medium
 
   * Experimental seccomp support
