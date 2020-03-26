@@ -1,6 +1,8 @@
 [Unit]
 Description=TCP stream duplicator
-Documentation=https://soslab.ethz.ch/isg/tcpdup
+Documentation=https://github.com/SOSETH/tcpdup
+Wants=network-online.target
+After=network-online.target
 
 [Service]
 Restart=always
